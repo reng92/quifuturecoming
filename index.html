@@ -811,6 +811,16 @@
       }
       .countdown-unit { min-width: 60px; }
     }
+
+    @media (max-height: 820px) {
+      #hero { padding: 28px 24px; }
+      .hero-logo { width: clamp(70px, 12vw, 110px); margin-bottom: 16px; }
+      .hero-subtitle { margin-bottom: 16px; }
+      .hero-tagline { font-size: clamp(1.1rem, 2.8vw, 1.5rem); margin-bottom: 18px; }
+      .hero-badge { margin-bottom: 28px; }
+      .countdown-number { font-size: clamp(2.2rem, 5.5vw, 3.8rem); }
+      .countdown-sep { font-size: clamp(2.2rem, 5.5vw, 3.8rem); }
+    }
   </style>
 </head>
 <body>
@@ -1011,7 +1021,7 @@
        COUNTDOWN
     ----------------------------------------------- */
     (function () {
-      var target = new Date('2026-06-01T00:00:00').getTime();
+      var target = new Date('2026-05-09T00:00:00').getTime();
 
       function pad(n) {
         return String(n).padStart(2, '0');
