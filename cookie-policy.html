@@ -307,6 +307,56 @@
       .policy-wrap { padding: 40px 20px 80px; }
       .policy-box { padding: 18px 20px; }
     }
+
+    /* Cookie Banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 9999;
+      background: var(--black-soft);
+      border-top: 1px solid var(--gold-border);
+      box-shadow: 0 -8px 48px rgba(0,0,0,0.75);
+      transform: translateY(110%);
+      transition: transform 0.45s cubic-bezier(0.22,1,0.36,1);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .cookie-banner.active { transform: translateY(0); }
+    .cookie-banner-inner {
+      max-width: 860px; margin: 0 auto;
+      padding: 26px 24px 22px;
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .cookie-banner h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--gold); margin-bottom: 8px; }
+    .cookie-banner-header p { font-size: 0.82rem; color: var(--gold); opacity: 0.7; line-height: 1.75; }
+    .cookie-banner-header a { color: var(--gold); opacity: 0.9; text-decoration: underline; text-decoration-color: var(--gold-border); }
+    .cookie-categories { border: 1px solid var(--gold-border); border-radius: 10px; overflow: hidden; }
+    .cookie-category { padding: 14px 18px; border-bottom: 1px solid var(--gold-border); }
+    .cookie-category:last-child { border-bottom: none; }
+    .cookie-cat-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+    .cookie-cat-name { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+    .cookie-always-on { font-size: 0.64rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); opacity: 0.5; border: 1px solid var(--gold-border); border-radius: 100px; padding: 3px 10px; white-space: nowrap; }
+    .cookie-cat-desc { font-size: 0.75rem; color: var(--gold); opacity: 0.55; line-height: 1.6; }
+    .cookie-toggle { position: relative; display: inline-block; width: 46px; height: 26px; flex-shrink: 0; cursor: pointer; }
+    .cookie-toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+    .cookie-toggle-slider { position: absolute; inset: 0; background: rgba(248,222,101,0.1); border: 1px solid var(--gold-border); border-radius: 26px; transition: background 0.25s, border-color 0.25s; }
+    .cookie-toggle-slider::before { content: ''; position: absolute; width: 18px; height: 18px; left: 3px; top: 50%; transform: translateY(-50%); background: rgba(248,222,101,0.4); border-radius: 50%; transition: transform 0.25s, background 0.25s; }
+    .cookie-toggle input:checked + .cookie-toggle-slider { background: rgba(248,222,101,0.2); border-color: rgba(248,222,101,0.6); }
+    .cookie-toggle input:checked + .cookie-toggle-slider::before { transform: translate(20px, -50%); background: var(--gold); }
+    .cookie-banner-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .cookie-btn { padding: 11px 24px; border-radius: 8px; font-family: var(--font-sans); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s, background 0.2s; white-space: nowrap; }
+    .cookie-btn:hover { transform: translateY(-2px); }
+    .cookie-btn-accept { background: var(--gold); color: var(--black); border: none; }
+    .cookie-btn-accept:hover { background: #ffe880; box-shadow: 0 6px 20px rgba(248,222,101,0.35); }
+    .cookie-btn-reject { background: transparent; color: var(--gold); border: 1px solid var(--gold-border); }
+    .cookie-btn-customize { background: transparent; color: var(--gold); border: 1px solid var(--gold-border); opacity: 0.65; }
+    .cookie-btn-save { background: var(--gold); color: var(--black); border: none; }
+    .cookie-btn-save:hover { background: #ffe880; box-shadow: 0 6px 20px rgba(248,222,101,0.35); }
+    .cookie-reopen-btn { background: none; border: none; color: var(--gold); text-decoration: underline; text-decoration-color: rgba(248,222,101,0.3); cursor: pointer; font-family: var(--font-sans); font-size: inherit; padding: 0; }
+    @media (max-width: 560px) {
+      .cookie-banner-actions { flex-direction: column; }
+      .cookie-btn { width: 100%; text-align: center; }
+    }
   </style>
 </head>
 <body>
@@ -528,20 +578,86 @@
     <p>
       Associazione Culturale QuiFuture – Centro Alta Formazione &nbsp;&middot;&nbsp; P.IVA 04939340610 &nbsp;&middot;&nbsp; C.F. 93141170618<br />
       Via Dante Alighieri 22, 81035 Curti (CE) – Italia<br />
-      <a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="cookie-policy.html">Cookie Policy</a> &nbsp;&middot;&nbsp; <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="cookie-policy.html">Cookie Policy</a> &nbsp;&middot;&nbsp; <a href="index.html">Home</a> &nbsp;&middot;&nbsp; <button class="cookie-reopen-btn" id="cookie-reopen">Gestisci cookie</button>
     </p>
   </footer>
 
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="ck-title" hidden>
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-header">
+        <h3 id="ck-title">Utilizziamo i cookie</h3>
+        <p>Usiamo cookie tecnici (sempre attivi) e, con il tuo consenso, cookie analitici e di marketing per migliorare la tua esperienza. Per saperne di più consulta la <a href="privacy-policy.html">Privacy Policy</a> e la <a href="cookie-policy.html">Cookie Policy</a>.</p>
+      </div>
+      <div class="cookie-categories" id="ck-categories" hidden>
+        <div class="cookie-category">
+          <div class="cookie-cat-header"><span class="cookie-cat-name">Tecnici / Necessari</span><span class="cookie-always-on">Sempre attivi</span></div>
+          <p class="cookie-cat-desc">Indispensabili per il corretto funzionamento del sito. Non richiedono consenso e non possono essere disabilitati.</p>
+        </div>
+        <div class="cookie-category">
+          <div class="cookie-cat-header"><span class="cookie-cat-name">Analitici</span><label class="cookie-toggle" aria-label="Attiva cookie analitici"><input type="checkbox" id="ck-analytics" /><span class="cookie-toggle-slider"></span></label></div>
+          <p class="cookie-cat-desc">Google Analytics 4 – misurano il traffico e le interazioni per migliorare il sito.</p>
+        </div>
+        <div class="cookie-category">
+          <div class="cookie-cat-header"><span class="cookie-cat-name">Marketing / Profilazione</span><label class="cookie-toggle" aria-label="Attiva cookie di marketing"><input type="checkbox" id="ck-marketing" /><span class="cookie-toggle-slider"></span></label></div>
+          <p class="cookie-cat-desc">Pixel di Meta (Facebook/Instagram) e strumenti di remarketing.</p>
+        </div>
+      </div>
+      <div class="cookie-banner-actions">
+        <button class="cookie-btn cookie-btn-customize" id="ck-customize">Personalizza</button>
+        <button class="cookie-btn cookie-btn-reject" id="ck-reject">Rifiuta tutti</button>
+        <button class="cookie-btn cookie-btn-accept" id="ck-accept">Accetta tutti</button>
+      </div>
+      <div class="cookie-banner-actions" id="ck-save-row" hidden>
+        <button class="cookie-btn cookie-btn-save" id="ck-save">Salva preferenze</button>
+      </div>
+    </div>
+  </div>
+
   <script>
-    /* Bottone "Gestisci preferenze" — riapre il banner nella pagina principale */
-    var btn = document.getElementById('cookie-manage');
-    if (btn) {
-      btn.addEventListener('click', function () {
-        window.location.href = 'index.html#cookie-manage';
-        /* Una volta tornati alla home il banner viene riaperto dal parametro hash
-           oppure l'utente può cliccare "Gestisci cookie" nel footer della home. */
+    (function () {
+      var STORAGE_KEY = 'qf_consent_v1';
+      var banner   = document.getElementById('cookie-banner');
+      var catPanel = document.getElementById('ck-categories');
+      var saveRow  = document.getElementById('ck-save-row');
+      if (!banner) return;
+
+      function getConsent() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch (e) { return null; } }
+      function setConsent(obj) { obj.ts = Date.now(); localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); }
+      function showBanner() { banner.hidden = false; requestAnimationFrame(function () { banner.classList.add('active'); }); }
+      function hideBanner() { banner.classList.remove('active'); setTimeout(function () { banner.hidden = true; }, 450); }
+      function applyConsent(c) { if (c.analytics) activateGA(); }
+      function activateGA() {
+        if (window._gaLoaded) return; window._gaLoaded = true;
+        var s = document.createElement('script'); s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2KXRF9MJN';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); } window.gtag = gtag;
+        gtag('js', new Date()); gtag('config', 'G-V2KXRF9MJN', { anonymize_ip: true });
+      }
+
+      var existing = getConsent();
+      if (existing) { applyConsent(existing); } else { setTimeout(showBanner, 900); }
+
+      document.getElementById('ck-accept').addEventListener('click', function () { var c = { analytics: true, marketing: true }; setConsent(c); applyConsent(c); hideBanner(); });
+      document.getElementById('ck-reject').addEventListener('click', function () { setConsent({ analytics: false, marketing: false }); hideBanner(); });
+      document.getElementById('ck-customize').addEventListener('click', function () { var open = catPanel.hidden; catPanel.hidden = !open; saveRow.hidden = !open; });
+      document.getElementById('ck-save').addEventListener('click', function () {
+        var c = { analytics: document.getElementById('ck-analytics').checked, marketing: document.getElementById('ck-marketing').checked };
+        setConsent(c); applyConsent(c); hideBanner();
       });
-    }
+      var reopen = document.getElementById('cookie-reopen');
+      if (reopen) {
+        reopen.addEventListener('click', function () {
+          catPanel.hidden = false; saveRow.hidden = false;
+          var c = getConsent() || {};
+          document.getElementById('ck-analytics').checked = !!c.analytics;
+          document.getElementById('ck-marketing').checked = !!c.marketing;
+          showBanner();
+        });
+      }
+    })();
   </script>
 
 </body>

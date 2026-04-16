@@ -489,17 +489,7 @@
     }
 
     .contact-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: start;
-    }
-
-    @media (max-width: 768px) {
-      .contact-inner {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
+      max-width: 640px;
     }
 
     .contact-info h2 {
@@ -594,229 +584,30 @@
       opacity: 0.85;
     }
 
-    /* Newsletter form */
-    .newsletter-box {
-      background: var(--black-card);
-      border: 1px solid var(--gold-border);
-      border-radius: 14px;
-      padding: 40px;
-    }
-
-    .newsletter-box h3 {
-      font-family: var(--font-serif);
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-
-    .newsletter-box p {
-      font-size: 0.88rem;
-      color: var(--gold);
-      opacity: 0.65;
-      margin-bottom: 28px;
-      line-height: 1.75;
-    }
-
-    .form-group {
-      margin-bottom: 16px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      opacity: 0.7;
-      margin-bottom: 8px;
-    }
-
-    .form-group input {
-      width: 100%;
-      background: rgba(248,222,101,0.05);
-      border: 1px solid var(--gold-border);
-      border-radius: 8px;
-      padding: 13px 18px;
-      font-family: var(--font-sans);
-      font-size: 0.9rem;
-      color: var(--gold);
-      outline: none;
-      transition: border-color 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .form-group input:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(248,222,101,0.1);
-    }
-
-    .form-group input:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0 1000px #0d0d0d inset;
-      -webkit-text-fill-color: var(--gold);
-    }
-
-    .btn-submit {
-      width: 100%;
-      background: var(--gold);
-      color: var(--black);
-      border: none;
-      border-radius: 8px;
-      padding: 14px 24px;
-      font-family: var(--font-sans);
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .btn-submit:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 28px rgba(248,222,101,0.4);
-      background: #ffe880;
-    }
-
-    .btn-submit:active {
-      transform: translateY(0);
-    }
-
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .form-success i {
-      font-size: 2.5rem;
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
-
-    .form-success p {
-      font-size: 0.95rem;
-      color: var(--gold);
-    }
-
     /* =============================================
        FOOTER
     ============================================= */
-    footer {
-      background: var(--black-soft);
+    .policy-footer {
       border-top: 1px solid var(--gold-border);
-      padding: 48px 0 32px;
+      padding: 32px 24px;
+      text-align: center;
       position: relative;
       z-index: 1;
     }
 
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-      text-align: center;
-    }
-
-    .footer-logo {
-      width: 72px;
-      height: auto;
-      opacity: 0.85;
-      filter: drop-shadow(0 0 8px rgba(248,222,101,0.4));
-      transition: opacity 0.3s ease;
-    }
-
-    .footer-logo:hover {
-      opacity: 1;
-    }
-
-    .footer-socials {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .footer-social-link {
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--gold-border);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--gold-dim);
-      transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-      text-decoration: none;
-    }
-
-    .footer-social-link i {
+    .policy-footer p {
+      font-size: 0.76rem;
       color: var(--gold);
-      font-size: 1rem;
+      opacity: 0.4;
+      line-height: 1.8;
     }
 
-    .footer-social-link:hover {
-      background: rgba(248,222,101,0.2);
-      border-color: var(--gold);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(248,222,101,0.2);
-    }
-
-    .footer-info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      padding: 20px 0;
-      border-top: 1px solid var(--gold-border);
-      border-bottom: 1px solid var(--gold-border);
-      width: 100%;
-    }
-
-    .footer-info-name {
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+    .policy-footer a {
       color: var(--gold);
-      opacity: 0.85;
+      opacity: 0.6;
     }
 
-    .footer-info-details {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px 24px;
-      font-size: 0.73rem;
-      letter-spacing: 0.04em;
-      color: var(--gold);
-      opacity: 0.5;
-    }
-
-    .footer-info-details span {
-      white-space: nowrap;
-      color: var(--gold);
-    }
-
-    .footer-copy {
-      font-size: 0.78rem;
-      color: var(--gold);
-      opacity: 0.45;
-      letter-spacing: 0.05em;
-    }
-
-    .footer-copy a {
-      color: var(--gold);
-      opacity: 0.7;
-      text-decoration: underline;
-      text-decoration-color: rgba(248,222,101,0.3);
-    }
-
-    /* =============================================
+        /* =============================================
        KEYFRAME ANIMATIONS
     ============================================= */
     @keyframes fadeInDown {
@@ -840,8 +631,8 @@
     @media (max-width: 600px) {
       .section { padding: 72px 0; }
       .cards-grid { grid-template-columns: 1fr; }
-      .newsletter-box { padding: 28px 20px; }
       .countdown-sep { display: none; }
+      .hero-logo { width: clamp(160px, 44vw, 200px); margin-bottom: 24px; }
     }
 
     @media (max-width: 400px) {
@@ -851,7 +642,7 @@
       .countdown-unit { min-width: 60px; }
     }
 
-    @media (max-height: 820px) {
+    @media (max-height: 820px) and (min-width: 601px) {
       #hero { padding: 28px 24px; }
       .hero-logo { width: clamp(70px, 12vw, 110px); margin-bottom: 16px; }
       .hero-subtitle { margin-bottom: 16px; }
@@ -1224,32 +1015,6 @@
           </div>
         </div>
 
-        <!-- Right: newsletter form -->
-        <div class="newsletter-box reveal reveal-delay-2">
-          <h3>Ricevi aggiornamenti</h3>
-          <p>Inserisci la tua email per essere tra i primi a sapere quando apriremo e per ricevere le nostre offerte di lancio.</p>
-
-          <form id="newsletter-form" novalidate>
-            <div class="form-group">
-              <label for="nl-name">Nome</label>
-              <input type="text" id="nl-name" name="name" placeholder="Il tuo nome" autocomplete="given-name" />
-            </div>
-            <div class="form-group">
-              <label for="nl-email">Email *</label>
-              <input type="email" id="nl-email" name="email" placeholder="tua@email.it" required autocomplete="email" />
-            </div>
-            <button type="submit" class="btn-submit">
-              <i class="fa-solid fa-bell"></i>
-              Avvisami
-            </button>
-          </form>
-
-          <div class="form-success" id="form-success">
-            <i class="fa-solid fa-circle-check"></i>
-            <p>Grazie! Ti avviseremo all'apertura.</p>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -1257,33 +1022,12 @@
   <!-- ============================================================
        FOOTER
   ============================================================ -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <img src="logo.png" alt="QuiFuture" class="footer-logo" />
-
-        <div class="footer-socials">
-          <a href="https://facebook.com/quifuture" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="https://instagram.com/quifuture" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </div>
-
-        <div class="footer-info">
-          <p class="footer-info-name">Associazione Culturale QuiFuture – Centro Alta Formazione</p>
-          <div class="footer-info-details">
-            <span>P.IVA 04939340610 &nbsp;&middot;&nbsp; C.F. 93141170618</span>
-            <span>Via Dante Alighieri 22, 81035 Curti (CE) – Italia</span>
-          </div>
-        </div>
-
-        <p class="footer-copy">
-          &copy; 2026 Associazione Culturale QuiFuture Centro Alta Formazione. Tutti i diritti riservati.&ensp;&middot;&ensp;<a href="privacy-policy.html">Privacy Policy</a>&ensp;&middot;&ensp;<a href="cookie-policy.html">Cookie Policy</a>&ensp;&middot;&ensp;<button class="cookie-reopen-btn" id="cookie-reopen">Gestisci cookie</button>
-        </p>
-      </div>
-    </div>
+  <footer class="policy-footer">
+    <p>
+      Associazione Culturale QuiFuture – Centro Alta Formazione &nbsp;&middot;&nbsp; P.IVA 04939340610 &nbsp;&middot;&nbsp; C.F. 93141170618<br />
+      Via Dante Alighieri 22, 81035 Curti (CE) – Italia<br />
+      <a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="cookie-policy.html">Cookie Policy</a> &nbsp;&middot;&nbsp; <button class="cookie-reopen-btn" id="cookie-reopen">Gestisci cookie</button>
+    </p>
   </footer>
 
   <!-- ============================================================
@@ -1416,26 +1160,6 @@
         { threshold: 0.12 }
       );
       els.forEach(function (el) { obs.observe(el); });
-    })();
-
-    /* -----------------------------------------------
-       NEWSLETTER FORM (UI only)
-    ----------------------------------------------- */
-    (function () {
-      var form    = document.getElementById('newsletter-form');
-      var success = document.getElementById('form-success');
-      if (!form) return;
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var email = document.getElementById('nl-email').value.trim();
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          document.getElementById('nl-email').focus();
-          return;
-        }
-        form.style.display = 'none';
-        success.style.display = 'block';
-      });
     })();
 
     /* -----------------------------------------------
