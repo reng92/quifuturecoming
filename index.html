@@ -582,29 +582,33 @@
       background: rgba(248,222,101,0.05);
       position: relative;
       overflow: hidden;
+      display: block;
+    }
+
+    .ig-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease, opacity 0.4s ease;
     }
 
     .ig-tile::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(248,222,101,0.09), transparent);
-      transform: translateX(-100%);
-      animation: igShimmer 2.8s ease-in-out infinite;
-      animation-delay: var(--d, 0s);
+      background: rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
 
-    @keyframes igShimmer {
-      0%   { transform: translateX(-100%); }
-      100% { transform: translateX(200%); }
+    .ig-tile:hover img {
+      transform: scale(1.06);
     }
 
-    .ig-tile:nth-child(1) { --d: 0s; }
-    .ig-tile:nth-child(2) { --d: 0.18s; }
-    .ig-tile:nth-child(3) { --d: 0.36s; }
-    .ig-tile:nth-child(4) { --d: 0.54s; }
-    .ig-tile:nth-child(5) { --d: 0.72s; }
-    .ig-tile:nth-child(6) { --d: 0.90s; }
+    .ig-tile:hover::after {
+      opacity: 1;
+    }
 
     .ig-cta {
       display: flex;
@@ -1180,18 +1184,17 @@
               </div>
             </div>
             <div class="ig-grid">
-              <div class="ig-tile"></div>
-              <div class="ig-tile"></div>
-              <div class="ig-tile"></div>
-              <div class="ig-tile"></div>
-              <div class="ig-tile"></div>
-              <div class="ig-tile"></div>
+              <a href="https://instagram.com/quifuture" target="_blank" rel="noopener noreferrer" class="ig-tile"><img src="instagram/instagram-1.jpg" alt="Post Instagram QuiFuture" loading="lazy" /></a>
+              <a href="https://instagram.com/quifuture" target="_blank" rel="noopener noreferrer" class="ig-tile"><img src="instagram/instagram-2.jpg" alt="Post Instagram QuiFuture" loading="lazy" /></a>
+              <a href="https://instagram.com/quifuture" target="_blank" rel="noopener noreferrer" class="ig-tile"><img src="instagram/instagram-3.jpg" alt="Post Instagram QuiFuture" loading="lazy" /></a>
+              <a href="https://instagram.com/quifuture" target="_blank" rel="noopener noreferrer" class="ig-tile"><img src="instagram/instagram-4.jpg" alt="Post Instagram QuiFuture" loading="lazy" /></a>
+              <a href="https://instagram.com/quifuture" target="_blank" rel="noopener noreferrer" class="ig-tile"><img src="instagram/instagram-5.jpg" alt="Post Instagram QuiFuture" loading="lazy" /></a>
+              <a href="https://instagram.com/quifuture" target="_blank" rel="noopener noreferrer" class="ig-tile"><img src="instagram/instagram-6.jpg" alt="Post Instagram QuiFuture" loading="lazy" /></a>
             </div>
             <a href="https://instagram.com/quifuture" target="_blank" rel="noopener noreferrer" class="ig-cta">
               <i class="fa-brands fa-instagram"></i>
               Seguici su Instagram
             </a>
-            <p class="ig-note">I post arrivano presto — seguici per non perderteli</p>
           </div>
         </div>
 
