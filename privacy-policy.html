@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – QuiFuture Centro Alta Formazione</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" sizes="32x32" href="fav.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="fav.png" />
+  <link rel="apple-touch-icon" href="fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --gold: #f8de65;
+      --gold-dim: rgba(248,222,101,0.12);
+      --gold-border: rgba(248,222,101,0.35);
+      --black: #000000;
+      --black-soft: #0a0a0a;
+      --black-card: #0d0d0d;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Montserrat', Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--black);
+      color: var(--gold);
+      font-family: var(--font-sans);
+      font-weight: 400;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: var(--font-serif); color: var(--gold); line-height: 1.25; }
+    p, span, a, li, td, th { color: var(--gold); }
+    a { text-decoration: underline; text-decoration-color: var(--gold-border); }
+    a:hover { text-decoration-color: var(--gold); }
+    img { max-width: 100%; display: block; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-border); border-radius: 3px; }
+
+    /* NAV */
+    .policy-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black-soft);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 16px 24px;
+    }
+
+    .policy-nav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .policy-nav-logo {
+      width: 36px;
+      height: auto;
+      filter: drop-shadow(0 0 6px rgba(248,222,101,0.5));
+    }
+
+    .policy-nav-brand {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .policy-nav-back {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      opacity: 0.65;
+      transition: opacity 0.2s;
+    }
+
+    .policy-nav-back:hover { opacity: 1; }
+
+    /* CONTENT */
+    .policy-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+
+    .policy-header {
+      margin-bottom: 56px;
+      text-align: center;
+    }
+
+    .policy-header .policy-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.5;
+      margin-bottom: 16px;
+    }
+
+    .policy-header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .policy-header .policy-date {
+      font-size: 0.8rem;
+      color: var(--gold);
+      opacity: 0.45;
+      letter-spacing: 0.06em;
+    }
+
+    .policy-divider {
+      width: 50px;
+      height: 2px;
+      background: var(--gold);
+      margin: 20px auto;
+      box-shadow: 0 0 8px rgba(248,222,101,0.5);
+    }
+
+    /* Sections */
+    .policy-section {
+      margin-bottom: 48px;
+    }
+
+    .policy-section h2 {
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--gold-border);
+    }
+
+    .policy-section h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-top: 24px;
+      margin-bottom: 10px;
+      font-family: var(--font-sans);
+      letter-spacing: 0.04em;
+    }
+
+    .policy-section p {
+      font-size: 0.9rem;
+      line-height: 1.85;
+      color: var(--gold);
+      opacity: 0.8;
+      margin-bottom: 14px;
+    }
+
+    .policy-section ul, .policy-section ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+
+    .policy-section li {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--gold);
+      opacity: 0.8;
+      margin-bottom: 6px;
+    }
+
+    .policy-box {
+      background: var(--black-card);
+      border: 1px solid var(--gold-border);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+
+    .policy-box p {
+      margin-bottom: 6px;
+      font-size: 0.88rem;
+      opacity: 0.85;
+    }
+
+    .policy-box strong {
+      color: var(--gold);
+      opacity: 1;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    .policy-footer {
+      border-top: 1px solid var(--gold-border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .policy-footer p {
+      font-size: 0.76rem;
+      color: var(--gold);
+      opacity: 0.4;
+      line-height: 1.8;
+    }
+
+    .policy-footer a {
+      color: var(--gold);
+      opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+      .policy-wrap { padding: 40px 20px 80px; }
+      .policy-box { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="policy-nav" aria-label="Navigazione">
+    <div class="policy-nav-inner">
+      <img src="logo.png" alt="QuiFuture" class="policy-nav-logo" />
+      <a href="index.html" class="policy-nav-brand" aria-label="Torna alla home">QUIFUTURE</a>
+      <a href="index.html" class="policy-nav-back">
+        <i class="fa-solid fa-arrow-left"></i>
+        Torna al sito
+      </a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="policy-wrap">
+
+    <div class="policy-header">
+      <p class="policy-label">Informativa ai sensi del Regolamento UE 2016/679 (GDPR)</p>
+      <h1>Privacy Policy</h1>
+      <div class="policy-divider"></div>
+      <p class="policy-date">Ultima revisione: 16 aprile 2026</p>
+    </div>
+
+    <!-- 1. Titolare -->
+    <section class="policy-section">
+      <h2>1. Titolare del trattamento</h2>
+      <p>Il titolare del trattamento dei dati personali raccolti tramite il presente sito web è:</p>
+      <div class="policy-box">
+        <p><strong>Denominazione:</strong> Associazione Culturale QuiFuture – Centro Alta Formazione</p>
+        <p><strong>Natura giuridica:</strong> Associazione Non Riconosciuta (Tipo sogg. 12)</p>
+        <p><strong>Codice Fiscale:</strong> 93141170618</p>
+        <p><strong>Partita IVA:</strong> 04939340610</p>
+        <p><strong>Sede legale:</strong> Via Dante Alighieri 22, 81035 Curti (CE) – Italia</p>
+        <p><strong>Rappresentante legale:</strong> Iengo Piogiuseppe</p>
+        <p><strong>Codice ATECO:</strong> 855920 – Corsi di formazione e corsi di aggiornamento</p>
+        <p><strong>E-mail:</strong> <a href="mailto:privacy@quifuture.it">privacy@quifuture.it</a></p>
+      </div>
+      <p>Il titolare non ha nominato un Responsabile della Protezione dei Dati (DPO) in quanto non rientra tra i soggetti obbligati ai sensi dell'art. 37 del GDPR.</p>
+    </section>
+
+    <!-- 2. Dati raccolti -->
+    <section class="policy-section">
+      <h2>2. Tipologie di dati trattati</h2>
+
+      <h3>2.1 Dati di navigazione</h3>
+      <p>I sistemi informatici e le procedure software preposte al funzionamento di questo sito acquisiscono, nel corso del loro normale esercizio, alcuni dati la cui trasmissione è implicita nell'uso dei protocolli di comunicazione di Internet. Si tratta di informazioni non raccolte per essere associate a interessati identificati, ma che per loro stessa natura potrebbero, attraverso elaborazioni e associazioni con dati detenuti da terzi, permettere di identificare gli utenti. In questa categoria rientrano gli indirizzi IP o i nomi a dominio dei computer e dei terminali utilizzati dagli utenti, gli indirizzi in notazione URI/URL (Uniform Resource Identifier/Locator) delle risorse richieste, l'orario della richiesta, il metodo utilizzato nel sottoporre la richiesta al server, la dimensione del file ottenuto in risposta, il codice numerico indicante lo stato della risposta data dal server (buon fine, errore, ecc.) e altri parametri relativi al sistema operativo e all'ambiente informatico dell'utente. Questi dati sono utilizzati al solo fine di ricavare informazioni statistiche anonime sull'uso del sito e per controllarne il corretto funzionamento. I dati di navigazione vengono cancellati dopo 12 mesi.</p>
+
+      <h3>2.2 Dati forniti volontariamente dall'utente</h3>
+      <p>L'invio facoltativo, esplicito e volontario di messaggi agli indirizzi di contatto indicati su questo sito, nonché la compilazione e l'inoltro dei moduli presenti sullo stesso, comportano l'acquisizione dei dati di contatto del mittente, necessari a rispondere, e di tutti i dati personali inclusi nelle comunicazioni. Nello specifico, tramite il modulo di iscrizione alla newsletter, vengono raccolti:</p>
+      <ul>
+        <li><strong>Nome</strong> (facoltativo)</li>
+        <li><strong>Indirizzo e-mail</strong> (obbligatorio)</li>
+      </ul>
+
+      <h3>2.3 Cookie e tecnologie di tracciamento</h3>
+      <p>Il sito utilizza cookie e tecnologie similari. Per l'informativa completa sui cookie utilizzati e sulle modalità di gestione del consenso si rimanda alla <a href="cookie-policy.html">Cookie Policy</a>.</p>
+    </section>
+
+    <!-- 3. Finalità -->
+    <section class="policy-section">
+      <h2>3. Finalità e basi giuridiche del trattamento</h2>
+      <p>I dati personali sono trattati per le seguenti finalità:</p>
+
+      <h3>3.1 Iscrizione alla newsletter e comunicazioni di marketing</h3>
+      <p><strong>Base giuridica:</strong> consenso dell'interessato (art. 6, par. 1, lett. a, GDPR). L'iscrizione alla newsletter è del tutto volontaria. Il consenso può essere revocato in qualsiasi momento scrivendo a <a href="mailto:privacy@quifuture.it">privacy@quifuture.it</a>.</p>
+
+      <h3>3.2 Riscontro a richieste di contatto</h3>
+      <p><strong>Base giuridica:</strong> esecuzione di misure precontrattuali adottate su richiesta dell'interessato (art. 6, par. 1, lett. b, GDPR) o legittimo interesse del titolare (art. 6, par. 1, lett. f, GDPR).</p>
+
+      <h3>3.3 Analisi statistica del sito (Google Analytics)</h3>
+      <p><strong>Base giuridica:</strong> consenso dell'interessato (art. 6, par. 1, lett. a, GDPR), acquisito tramite il banner cookie. I dati sono anonimizzati e aggregati.</p>
+
+      <h3>3.4 Adempimento di obblighi di legge</h3>
+      <p><strong>Base giuridica:</strong> obbligo legale (art. 6, par. 1, lett. c, GDPR). Il titolare potrà trattare i dati per adempiere agli obblighi previsti dalla legge, da regolamenti o dalla normativa dell'Unione Europea.</p>
+    </section>
+
+    <!-- 4. Modalità -->
+    <section class="policy-section">
+      <h2>4. Modalità del trattamento e conservazione</h2>
+      <p>Il trattamento dei dati personali avviene mediante strumenti elettronici e/o manuali, con modalità organizzative e logiche strettamente correlate alle finalità indicate e adottando misure di sicurezza adeguate a ridurre i rischi di distruzione o perdita, accesso non autorizzato o non conforme alle finalità della raccolta.</p>
+
+      <h3>Periodi di conservazione</h3>
+      <ul>
+        <li><strong>Dati newsletter:</strong> conservati fino alla revoca del consenso o alla richiesta di cancellazione da parte dell'interessato.</li>
+        <li><strong>Dati di log e navigazione:</strong> conservati per un massimo di 12 mesi.</li>
+        <li><strong>Cookie analitici:</strong> si veda la <a href="cookie-policy.html">Cookie Policy</a>.</li>
+        <li><strong>Dati di contatto (richieste):</strong> conservati per il tempo strettamente necessario a gestire la richiesta e, successivamente, per un massimo di 24 mesi per fini di documentazione.</li>
+      </ul>
+    </section>
+
+    <!-- 5. Destinatari -->
+    <section class="policy-section">
+      <h2>5. Destinatari e comunicazione dei dati</h2>
+      <p>I dati personali potranno essere comunicati o resi accessibili a soggetti terzi nelle seguenti circostanze:</p>
+      <ul>
+        <li><strong>Fornitori di servizi IT e hosting</strong> che gestiscono i sistemi informativi del titolare, in qualità di responsabili del trattamento (art. 28 GDPR).</li>
+        <li><strong>Google LLC</strong> – in qualità di fornitore del servizio Google Analytics, qualora l'utente abbia prestato consenso ai cookie analitici. Google LLC è certificata nel quadro UE-USA Data Privacy Framework, garantendo un livello di protezione adeguato ai sensi dell'art. 45 GDPR.</li>
+        <li><strong>Meta Platforms Ireland Ltd</strong> – in qualità di fornitore di pixel di tracking per finalità pubblicitarie, qualora l'utente abbia prestato consenso ai cookie di marketing.</li>
+        <li><strong>Autorità pubbliche</strong> – nei casi previsti dalla legge, a seguito di richieste formali da parte di autorità giudiziarie o di polizia.</li>
+      </ul>
+      <p>I dati non vengono diffusi a soggetti indeterminati né venduti a terzi per scopi commerciali.</p>
+    </section>
+
+    <!-- 6. Trasferimenti -->
+    <section class="policy-section">
+      <h2>6. Trasferimenti internazionali</h2>
+      <p>L'utilizzo di servizi come Google Analytics può comportare il trasferimento di dati personali verso gli Stati Uniti d'America. Tali trasferimenti avvengono nel rispetto delle garanzie previste dal Regolamento UE 2016/679 (artt. 44–49), in particolare sulla base del Data Privacy Framework UE-USA (decisione di adeguatezza della Commissione Europea del 10 luglio 2023) e/o delle Clausole Contrattuali Standard.</p>
+    </section>
+
+    <!-- 7. Diritti -->
+    <section class="policy-section">
+      <h2>7. Diritti dell'interessato</h2>
+      <p>In qualità di interessato, hai il diritto di:</p>
+      <ul>
+        <li><strong>Accesso (art. 15 GDPR):</strong> ottenere conferma dell'esistenza di un trattamento che ti riguarda e riceverne copia.</li>
+        <li><strong>Rettifica (art. 16 GDPR):</strong> ottenere la correzione dei dati inesatti o incompleti.</li>
+        <li><strong>Cancellazione (art. 17 GDPR):</strong> ottenere la cancellazione dei dati, ove sussistano le condizioni previste.</li>
+        <li><strong>Limitazione del trattamento (art. 18 GDPR):</strong> ottenere la limitazione del trattamento nei casi previsti.</li>
+        <li><strong>Portabilità dei dati (art. 20 GDPR):</strong> ricevere i dati in formato strutturato e di uso comune, ove applicabile.</li>
+        <li><strong>Opposizione (art. 21 GDPR):</strong> opporti al trattamento basato sul legittimo interesse del titolare.</li>
+        <li><strong>Revoca del consenso (art. 7 GDPR):</strong> revocare in qualsiasi momento il consenso prestato, senza pregiudicare la liceità del trattamento basata sul consenso prima della revoca.</li>
+      </ul>
+      <p>Per esercitare i tuoi diritti, puoi inviare una richiesta scritta a: <a href="mailto:privacy@quifuture.it">privacy@quifuture.it</a></p>
+      <p>Il titolare risponderà entro 30 giorni dalla ricezione della richiesta (termine prorogabile fino a 90 giorni in caso di particolare complessità, con comunicazione motivata).</p>
+    </section>
+
+    <!-- 8. Reclamo -->
+    <section class="policy-section">
+      <h2>8. Diritto di reclamo all'Autorità di controllo</h2>
+      <p>Hai il diritto di proporre reclamo al Garante per la protezione dei dati personali (autorità di controllo italiana) qualora ritenga che il trattamento dei tuoi dati personali violi il GDPR.</p>
+      <div class="policy-box">
+        <p><strong>Garante per la protezione dei dati personali</strong></p>
+        <p>Piazza Venezia 11, 00187 Roma (RM) – Italia</p>
+        <p>Telefono: +39 06 69677 1</p>
+        <p>Sito web: <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a></p>
+      </div>
+    </section>
+
+    <!-- 9. Modifiche -->
+    <section class="policy-section">
+      <h2>9. Modifiche alla presente informativa</h2>
+      <p>Il titolare si riserva il diritto di apportare modifiche alla presente informativa in qualsiasi momento, dandone pubblicità agli utenti su questa pagina. Si prega dunque di consultare regolarmente questa pagina, facendo riferimento alla data di ultima modifica indicata in cima al documento. In caso di mancata accettazione delle modifiche apportate, l'interessato è tenuto a cessare l'utilizzo del sito e può richiedere al titolare di rimuovere i propri dati personali.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="policy-footer">
+    <p>
+      Associazione Culturale QuiFuture – Centro Alta Formazione &nbsp;&middot;&nbsp; P.IVA 04939340610 &nbsp;&middot;&nbsp; C.F. 93141170618<br />
+      Via Dante Alighieri 22, 81035 Curti (CE) – Italia<br />
+      <a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="cookie-policy.html">Cookie Policy</a> &nbsp;&middot;&nbsp; <a href="index.html">Home</a>
+    </p>
+  </footer>
+
+</body>
+</html>

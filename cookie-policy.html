@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy – QuiFuture Centro Alta Formazione</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" sizes="32x32" href="fav.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="fav.png" />
+  <link rel="apple-touch-icon" href="fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --gold: #f8de65;
+      --gold-dim: rgba(248,222,101,0.12);
+      --gold-border: rgba(248,222,101,0.35);
+      --black: #000000;
+      --black-soft: #0a0a0a;
+      --black-card: #0d0d0d;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Montserrat', Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--black);
+      color: var(--gold);
+      font-family: var(--font-sans);
+      font-weight: 400;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: var(--font-serif); color: var(--gold); line-height: 1.25; }
+    p, span, a, li, td, th, caption { color: var(--gold); }
+    a { text-decoration: underline; text-decoration-color: var(--gold-border); }
+    a:hover { text-decoration-color: var(--gold); }
+    img { max-width: 100%; display: block; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-border); border-radius: 3px; }
+
+    /* NAV */
+    .policy-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black-soft);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 16px 24px;
+    }
+
+    .policy-nav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .policy-nav-logo {
+      width: 36px;
+      height: auto;
+      filter: drop-shadow(0 0 6px rgba(248,222,101,0.5));
+    }
+
+    .policy-nav-brand {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .policy-nav-back {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      opacity: 0.65;
+      transition: opacity 0.2s;
+    }
+
+    .policy-nav-back:hover { opacity: 1; }
+
+    /* CONTENT */
+    .policy-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+
+    .policy-header {
+      margin-bottom: 56px;
+      text-align: center;
+    }
+
+    .policy-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.5;
+      margin-bottom: 16px;
+    }
+
+    .policy-header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .policy-date {
+      font-size: 0.8rem;
+      color: var(--gold);
+      opacity: 0.45;
+      letter-spacing: 0.06em;
+    }
+
+    .policy-divider {
+      width: 50px;
+      height: 2px;
+      background: var(--gold);
+      margin: 20px auto;
+      box-shadow: 0 0 8px rgba(248,222,101,0.5);
+    }
+
+    .policy-section {
+      margin-bottom: 48px;
+    }
+
+    .policy-section h2 {
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--gold-border);
+    }
+
+    .policy-section h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-top: 28px;
+      margin-bottom: 10px;
+      font-family: var(--font-sans);
+      letter-spacing: 0.04em;
+    }
+
+    .policy-section p {
+      font-size: 0.9rem;
+      line-height: 1.85;
+      color: var(--gold);
+      opacity: 0.8;
+      margin-bottom: 14px;
+    }
+
+    .policy-section ul, .policy-section ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+
+    .policy-section li {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--gold);
+      opacity: 0.8;
+      margin-bottom: 6px;
+    }
+
+    /* Cookie table */
+    .cookie-table-wrap {
+      overflow-x: auto;
+      margin: 20px 0 28px;
+      border: 1px solid var(--gold-border);
+      border-radius: 10px;
+    }
+
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 560px;
+    }
+
+    .cookie-table th {
+      background: rgba(248,222,101,0.08);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--gold-border);
+      white-space: nowrap;
+    }
+
+    .cookie-table td {
+      font-size: 0.82rem;
+      color: var(--gold);
+      opacity: 0.75;
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(248,222,101,0.12);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .cookie-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cookie-table tr:hover td {
+      background: rgba(248,222,101,0.04);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    .badge-tech    { border: 1px solid rgba(120,220,120,0.4); color: #78dc78; opacity: 1; }
+    .badge-analytics { border: 1px solid rgba(248,222,101,0.5); color: var(--gold); opacity: 1; }
+    .badge-marketing { border: 1px solid rgba(248,180,101,0.5); color: #f8b465; opacity: 1; }
+
+    .policy-box {
+      background: var(--black-card);
+      border: 1px solid var(--gold-border);
+      border-radius: 10px;
+      padding: 22px 26px;
+      margin-bottom: 20px;
+    }
+
+    .policy-box p {
+      margin-bottom: 6px;
+      font-size: 0.88rem;
+      opacity: 0.85;
+    }
+
+    .policy-box strong { color: var(--gold); font-weight: 600; }
+
+    /* Gestisci button */
+    .manage-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--black);
+      border: none;
+      border-radius: 8px;
+      padding: 12px 26px;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .manage-btn:hover {
+      transform: translateY(-2px);
+      background: #ffe880;
+      box-shadow: 0 6px 20px rgba(248,222,101,0.35);
+    }
+
+    /* Footer */
+    .policy-footer {
+      border-top: 1px solid var(--gold-border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .policy-footer p {
+      font-size: 0.76rem;
+      color: var(--gold);
+      opacity: 0.4;
+      line-height: 1.8;
+    }
+
+    .policy-footer a { color: var(--gold); opacity: 0.6; }
+
+    @media (max-width: 600px) {
+      .policy-wrap { padding: 40px 20px 80px; }
+      .policy-box { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="policy-nav" aria-label="Navigazione">
+    <div class="policy-nav-inner">
+      <img src="logo.png" alt="QuiFuture" class="policy-nav-logo" />
+      <a href="index.html" class="policy-nav-brand" aria-label="Torna alla home">QUIFUTURE</a>
+      <a href="index.html" class="policy-nav-back">
+        <i class="fa-solid fa-arrow-left"></i>
+        Torna al sito
+      </a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="policy-wrap">
+
+    <div class="policy-header">
+      <p class="policy-label">Informativa cookie ai sensi del Regolamento UE 2016/679 (GDPR) e del Provvedimento del Garante dell'8 gennaio 2022</p>
+      <h1>Cookie Policy</h1>
+      <div class="policy-divider"></div>
+      <p class="policy-date">Ultima revisione: 16 aprile 2026</p>
+    </div>
+
+    <!-- 1. Cosa sono -->
+    <section class="policy-section">
+      <h2>1. Cosa sono i cookie</h2>
+      <p>I cookie sono piccoli file di testo che i siti web visitati dall'utente inviano al suo terminale (computer, tablet, smartphone, notebook), dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla visita successiva. I cookie consentono a un sito web di riconoscere il dispositivo dell'utente, ricordare le sue preferenze e garantirgli un'esperienza di navigazione coerente e migliore.</p>
+      <p>Oltre ai cookie, questo sito può utilizzare tecnologie simili come pixel di tracciamento (web beacon) e local storage, soggetti alle stesse regole in materia di consenso.</p>
+    </section>
+
+    <!-- 2. Categorie -->
+    <section class="policy-section">
+      <h2>2. Categorie di cookie utilizzati</h2>
+      <p>Il presente sito web utilizza le seguenti categorie di cookie:</p>
+
+      <!-- 2.1 Tecnici -->
+      <h3>2.1 Cookie tecnici / strettamente necessari</h3>
+      <p>Questi cookie sono indispensabili per il funzionamento del sito e non possono essere disabilitati nei nostri sistemi. Di norma vengono impostati solo in risposta ad azioni da te effettuate come la scelta delle preferenze sulla privacy o la compilazione di moduli. Non memorizzano alcuna informazione personale identificabile. Non richiedono il tuo consenso ai sensi della normativa vigente.</p>
+
+      <div class="cookie-table-wrap">
+        <table class="cookie-table">
+          <thead>
+            <tr>
+              <th>Nome cookie</th>
+              <th>Categoria</th>
+              <th>Fornitore</th>
+              <th>Scopo</th>
+              <th>Durata</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>qf_consent_v1</code></td>
+              <td><span class="badge badge-tech">Tecnico</span></td>
+              <td>quifuture.it</td>
+              <td>Memorizza le preferenze di consenso ai cookie dell'utente (localStorage).</td>
+              <td>Persistente (fino a revoca)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 2.2 Analitici -->
+      <h3>2.2 Cookie analitici</h3>
+      <p>Questi cookie ci consentono di contare le visite e le sorgenti di traffico, così da misurare e migliorare le prestazioni del nostro sito. Ci aiutano a sapere quali pagine sono più e meno popolari e a capire come i visitatori si muovono nel sito. Tutte le informazioni raccolte da questi cookie sono aggregate e quindi anonime. Vengono installati <strong>solo previo consenso esplicito</strong> dell'utente.</p>
+      <p><strong>Fornitore:</strong> Google LLC – Google Analytics 4. Per maggiori informazioni: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Google</a> e <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out</a>.</p>
+
+      <div class="cookie-table-wrap">
+        <table class="cookie-table">
+          <thead>
+            <tr>
+              <th>Nome cookie</th>
+              <th>Categoria</th>
+              <th>Fornitore</th>
+              <th>Scopo</th>
+              <th>Durata</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>_ga</code></td>
+              <td><span class="badge badge-analytics">Analitico</span></td>
+              <td>Google Analytics</td>
+              <td>Distingue gli utenti unici assegnando un ID casuale. Usato per calcolare dati di visitatori, sessioni e campagne.</td>
+              <td>2 anni</td>
+            </tr>
+            <tr>
+              <td><code>_ga_V2KXRF9MJN</code></td>
+              <td><span class="badge badge-analytics">Analitico</span></td>
+              <td>Google Analytics</td>
+              <td>Mantiene lo stato della sessione di Google Analytics 4.</td>
+              <td>2 anni</td>
+            </tr>
+            <tr>
+              <td><code>_gid</code></td>
+              <td><span class="badge badge-analytics">Analitico</span></td>
+              <td>Google Analytics</td>
+              <td>Distingue gli utenti. Viene aggiornato ad ogni sessione.</td>
+              <td>24 ore</td>
+            </tr>
+            <tr>
+              <td><code>_gat</code></td>
+              <td><span class="badge badge-analytics">Analitico</span></td>
+              <td>Google Analytics</td>
+              <td>Limita il numero di richieste inoltrate a Google (throttling).</td>
+              <td>1 minuto</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 2.3 Marketing -->
+      <h3>2.3 Cookie di marketing / profilazione</h3>
+      <p>Questi cookie possono essere installati attraverso il nostro sito dai nostri partner pubblicitari (Meta/Facebook, Instagram). Possono essere utilizzati da tali aziende per costruire un profilo dei tuoi interessi e mostrarti annunci pertinenti su altri siti. Non memorizzano direttamente informazioni personali, ma si basano sull'identificazione univoca del tuo browser e del tuo dispositivo Internet. Vengono installati <strong>solo previo consenso esplicito</strong> dell'utente.</p>
+
+      <div class="cookie-table-wrap">
+        <table class="cookie-table">
+          <thead>
+            <tr>
+              <th>Nome cookie</th>
+              <th>Categoria</th>
+              <th>Fornitore</th>
+              <th>Scopo</th>
+              <th>Durata</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>_fbp</code></td>
+              <td><span class="badge badge-marketing">Marketing</span></td>
+              <td>Meta Platforms (Facebook / Instagram)</td>
+              <td>Utilizzato da Facebook per fornire una serie di prodotti pubblicitari, tra cui le offerte in tempo reale di inserzionisti terzi.</td>
+              <td>3 mesi</td>
+            </tr>
+            <tr>
+              <td><code>_fbc</code></td>
+              <td><span class="badge badge-marketing">Marketing</span></td>
+              <td>Meta Platforms (Facebook / Instagram)</td>
+              <td>Memorizza l'ultima volta che un utente ha cliccato su un annuncio di Facebook.</td>
+              <td>2 anni</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Per informazioni sulla privacy di Meta: <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener noreferrer">Norme sulla privacy di Meta</a>.</p>
+    </section>
+
+    <!-- 3. Cookie di terze parti -->
+    <section class="policy-section">
+      <h2>3. Cookie di terze parti</h2>
+      <p>Alcune funzionalità del sito possono prevedere l'interazione con servizi di terze parti (come pulsanti social, mappe, video incorporati). Tali servizi possono impostare propri cookie, non sotto il controllo diretto del titolare. Ti invitiamo a consultare le privacy policy dei relativi fornitori per maggiori dettagli:</p>
+      <ul>
+        <li><strong>Google LLC</strong> – <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
+        <li><strong>Meta Platforms Ireland Ltd</strong> – <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener noreferrer">facebook.com/policy.php</a></li>
+        <li><strong>Instagram (Meta)</strong> – <a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener noreferrer">privacycenter.instagram.com/policy</a></li>
+      </ul>
+    </section>
+
+    <!-- 4. Base giuridica -->
+    <section class="policy-section">
+      <h2>4. Base giuridica del trattamento</h2>
+      <p>Il trattamento tramite cookie tecnici non richiede consenso, in quanto strettamente necessario all'erogazione del servizio richiesto dall'utente (art. 6, par. 1, lett. b, GDPR; art. 122, comma 1, D.Lgs. 196/2003 come modificato dal D.Lgs. 101/2018).</p>
+      <p>Il trattamento tramite cookie analitici e di profilazione è effettuato solo previo consenso esplicito e libero dell'utente (art. 6, par. 1, lett. a, GDPR), acquisito tramite il banner presente sul sito al primo accesso e sempre modificabile.</p>
+    </section>
+
+    <!-- 5. Gestione -->
+    <section class="policy-section">
+      <h2>5. Come gestire o revocare il consenso</h2>
+
+      <h3>5.1 Tramite il pannello preferenze del sito</h3>
+      <p>Puoi gestire o revocare il tuo consenso ai cookie in qualsiasi momento cliccando sul pulsante qui sotto:</p>
+      <button class="manage-btn" id="cookie-manage">
+        <i class="fa-solid fa-sliders"></i>
+        Gestisci preferenze cookie
+      </button>
+
+      <h3>5.2 Tramite le impostazioni del browser</h3>
+      <p>Puoi impostare il tuo browser in modo da bloccare o avvisarti riguardo ai cookie. Tieni presente che alcune parti del sito potrebbero non funzionare correttamente. Di seguito i link alle istruzioni per i principali browser:</p>
+      <ul>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/it/kb/protezione-antitracciamento-avanzata-firefox" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+        <li><a href="https://support.microsoft.com/it-it/windows/eliminare-e-gestire-i-cookie-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+        <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Apple Safari</a></li>
+      </ul>
+
+      <h3>5.3 Opt-out specifico Google Analytics</h3>
+      <p>Puoi impedire la raccolta e l'utilizzo dei dati da parte di Google Analytics installando il <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">componente aggiuntivo del browser per la disattivazione di Google Analytics</a>.</p>
+
+      <h3>5.4 Opt-out specifico Meta (Facebook/Instagram)</h3>
+      <p>Puoi gestire le preferenze pubblicitarie di Meta tramite le <a href="https://www.facebook.com/ads/preferences/" target="_blank" rel="noopener noreferrer">impostazioni degli annunci di Facebook</a>.</p>
+    </section>
+
+    <!-- 6. Contatti -->
+    <section class="policy-section">
+      <h2>6. Contatti e reclami</h2>
+      <p>Per qualsiasi informazione o richiesta relativa ai cookie utilizzati su questo sito, puoi contattare il titolare del trattamento:</p>
+      <div class="policy-box">
+        <p><strong>Associazione Culturale QuiFuture – Centro Alta Formazione</strong></p>
+        <p>Via Dante Alighieri 22, 81035 Curti (CE) – Italia</p>
+        <p>E-mail: <a href="mailto:privacy@quifuture.it">privacy@quifuture.it</a></p>
+      </div>
+      <p>Hai inoltre il diritto di proporre reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">Garante per la protezione dei dati personali</a> qualora ritenga che il trattamento violi il GDPR.</p>
+    </section>
+
+    <!-- 7. Modifiche -->
+    <section class="policy-section">
+      <h2>7. Modifiche alla presente Cookie Policy</h2>
+      <p>Il titolare si riserva il diritto di apportare modifiche alla presente Cookie Policy in qualsiasi momento. In caso di aggiornamenti sostanziali, in particolare di nuovi cookie o nuove finalità di trattamento, verrà ripresentato all'utente il banner del consenso. La data di ultima revisione è sempre indicata in cima a questa pagina.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="policy-footer">
+    <p>
+      Associazione Culturale QuiFuture – Centro Alta Formazione &nbsp;&middot;&nbsp; P.IVA 04939340610 &nbsp;&middot;&nbsp; C.F. 93141170618<br />
+      Via Dante Alighieri 22, 81035 Curti (CE) – Italia<br />
+      <a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="cookie-policy.html">Cookie Policy</a> &nbsp;&middot;&nbsp; <a href="index.html">Home</a>
+    </p>
+  </footer>
+
+  <script>
+    /* Bottone "Gestisci preferenze" — riapre il banner nella pagina principale */
+    var btn = document.getElementById('cookie-manage');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.location.href = 'index.html#cookie-manage';
+        /* Una volta tornati alla home il banner viene riaperto dal parametro hash
+           oppure l'utente può cliccare "Gestisci cookie" nel footer della home. */
+      });
+    }
+  </script>
+
+</body>
+</html>
