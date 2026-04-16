@@ -494,7 +494,153 @@
     }
 
     .contact-inner {
-      max-width: 640px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    /* Instagram widget */
+    .ig-widget {
+      background: var(--black-card);
+      border: 1px solid var(--gold-border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .ig-top-bar {
+      height: 3px;
+      background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .ig-body {
+      padding: 28px;
+    }
+
+    .ig-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .ig-avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      padding: 2px;
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      flex-shrink: 0;
+    }
+
+    .ig-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: contain;
+      background: var(--black-card);
+      padding: 5px;
+    }
+
+    .ig-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .ig-handle {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+    }
+
+    .ig-tagline {
+      font-size: 0.74rem;
+      color: var(--gold);
+      opacity: 0.5;
+    }
+
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .ig-tile {
+      aspect-ratio: 1;
+      background: rgba(248,222,101,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ig-tile::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(248,222,101,0.09), transparent);
+      transform: translateX(-100%);
+      animation: igShimmer 2.8s ease-in-out infinite;
+      animation-delay: var(--d, 0s);
+    }
+
+    @keyframes igShimmer {
+      0%   { transform: translateX(-100%); }
+      100% { transform: translateX(200%); }
+    }
+
+    .ig-tile:nth-child(1) { --d: 0s; }
+    .ig-tile:nth-child(2) { --d: 0.18s; }
+    .ig-tile:nth-child(3) { --d: 0.36s; }
+    .ig-tile:nth-child(4) { --d: 0.54s; }
+    .ig-tile:nth-child(5) { --d: 0.72s; }
+    .ig-tile:nth-child(6) { --d: 0.90s; }
+
+    .ig-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 13px 24px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .ig-cta:hover {
+      opacity: 0.88;
+      transform: translateY(-2px);
+    }
+
+    .ig-cta, .ig-cta i {
+      color: #fff;
+    }
+
+    .ig-note {
+      text-align: center;
+      font-size: 0.71rem;
+      color: var(--gold);
+      opacity: 0.35;
+      margin-top: 12px;
+      letter-spacing: 0.04em;
+      line-height: 1.6;
     }
 
     .contact-info h2 {
@@ -1017,6 +1163,35 @@
           <div class="address-block">
             <i class="fa-solid fa-location-dot"></i>
             <p>Via Dante Alighieri 22<br>Curti (CE) – Campania, Italia</p>
+          </div>
+        </div>
+
+        <!-- Right: Instagram -->
+        <div class="ig-widget reveal reveal-delay-2">
+          <div class="ig-top-bar"></div>
+          <div class="ig-body">
+            <div class="ig-header">
+              <div class="ig-avatar">
+                <img src="logo.png" alt="QuiFuture" />
+              </div>
+              <div class="ig-meta">
+                <span class="ig-handle">@quifuture</span>
+                <span class="ig-tagline">Centro Alta Formazione</span>
+              </div>
+            </div>
+            <div class="ig-grid">
+              <div class="ig-tile"></div>
+              <div class="ig-tile"></div>
+              <div class="ig-tile"></div>
+              <div class="ig-tile"></div>
+              <div class="ig-tile"></div>
+              <div class="ig-tile"></div>
+            </div>
+            <a href="https://instagram.com/quifuture" target="_blank" rel="noopener noreferrer" class="ig-cta">
+              <i class="fa-brands fa-instagram"></i>
+              Seguici su Instagram
+            </a>
+            <p class="ig-note">I post arrivano presto — seguici per non perderteli</p>
           </div>
         </div>
 
