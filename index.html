@@ -1276,8 +1276,6 @@
           <div class="footer-info-details">
             <span>P.IVA 04939340610 &nbsp;&middot;&nbsp; C.F. 93141170618</span>
             <span>Via Dante Alighieri 22, 81035 Curti (CE) – Italia</span>
-            <span>Associazione Non Riconosciuta &nbsp;&middot;&nbsp; Cod. ATECO 855920</span>
-            <span>Legale rapp.: Iengo Piogiuseppe</span>
           </div>
         </div>
 
@@ -1287,6 +1285,64 @@
       </div>
     </div>
   </footer>
+
+  <!-- ============================================================
+       COOKIE BANNER
+  ============================================================ -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="ck-title" hidden>
+    <div class="cookie-banner-inner">
+
+      <div class="cookie-banner-header">
+        <h3 id="ck-title">Utilizziamo i cookie</h3>
+        <p>Usiamo cookie tecnici (sempre attivi) e, con il tuo consenso, cookie analitici e di marketing per migliorare la tua esperienza. Puoi personalizzare le preferenze o accettarle tutte. Per saperne di più consulta la <a href="privacy-policy.html">Privacy Policy</a> e la <a href="cookie-policy.html">Cookie Policy</a>.</p>
+      </div>
+
+      <div class="cookie-categories" id="ck-categories" hidden>
+
+        <div class="cookie-category">
+          <div class="cookie-cat-header">
+            <span class="cookie-cat-name">Tecnici / Necessari</span>
+            <span class="cookie-always-on">Sempre attivi</span>
+          </div>
+          <p class="cookie-cat-desc">Indispensabili per il corretto funzionamento del sito. Non richiedono consenso e non possono essere disabilitati.</p>
+        </div>
+
+        <div class="cookie-category">
+          <div class="cookie-cat-header">
+            <span class="cookie-cat-name">Analitici</span>
+            <label class="cookie-toggle" aria-label="Attiva cookie analitici">
+              <input type="checkbox" id="ck-analytics" />
+              <span class="cookie-toggle-slider"></span>
+            </label>
+          </div>
+          <p class="cookie-cat-desc">Google Analytics 4 – misurano il traffico e le interazioni per migliorare il sito. I dati sono anonimizzati e aggregati, senza identificazione personale.</p>
+        </div>
+
+        <div class="cookie-category">
+          <div class="cookie-cat-header">
+            <span class="cookie-cat-name">Marketing / Profilazione</span>
+            <label class="cookie-toggle" aria-label="Attiva cookie di marketing">
+              <input type="checkbox" id="ck-marketing" />
+              <span class="cookie-toggle-slider"></span>
+            </label>
+          </div>
+          <p class="cookie-cat-desc">Pixel di Meta (Facebook/Instagram) e strumenti di remarketing. Permettono di mostrarti annunci pertinenti sui social e sulle piattaforme partner.</p>
+        </div>
+
+      </div>
+
+      <div class="cookie-banner-actions">
+        <button class="cookie-btn cookie-btn-customize" id="ck-customize">Personalizza</button>
+        <button class="cookie-btn cookie-btn-reject" id="ck-reject">Rifiuta tutti</button>
+        <button class="cookie-btn cookie-btn-accept" id="ck-accept">Accetta tutti</button>
+      </div>
+
+      <div class="cookie-banner-actions" id="ck-save-row" hidden>
+        <button class="cookie-btn cookie-btn-save" id="ck-save">Salva preferenze</button>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ============================================================
        JAVASCRIPT
@@ -1546,65 +1602,6 @@
       loop();
     })();
   </script>
-
-
-  <!-- ============================================================
-       COOKIE BANNER
-  ============================================================ -->
-  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="ck-title" hidden>
-    <div class="cookie-banner-inner">
-
-      <div class="cookie-banner-header">
-        <h3 id="ck-title">Utilizziamo i cookie</h3>
-        <p>Usiamo cookie tecnici (sempre attivi) e, con il tuo consenso, cookie analitici e di marketing per migliorare la tua esperienza. Puoi personalizzare le preferenze o accettarle tutte. Per saperne di più consulta la <a href="privacy-policy.html">Privacy Policy</a> e la <a href="cookie-policy.html">Cookie Policy</a>.</p>
-      </div>
-
-      <div class="cookie-categories" id="ck-categories" hidden>
-
-        <div class="cookie-category">
-          <div class="cookie-cat-header">
-            <span class="cookie-cat-name">Tecnici / Necessari</span>
-            <span class="cookie-always-on">Sempre attivi</span>
-          </div>
-          <p class="cookie-cat-desc">Indispensabili per il corretto funzionamento del sito. Non richiedono consenso e non possono essere disabilitati.</p>
-        </div>
-
-        <div class="cookie-category">
-          <div class="cookie-cat-header">
-            <span class="cookie-cat-name">Analitici</span>
-            <label class="cookie-toggle" aria-label="Attiva cookie analitici">
-              <input type="checkbox" id="ck-analytics" />
-              <span class="cookie-toggle-slider"></span>
-            </label>
-          </div>
-          <p class="cookie-cat-desc">Google Analytics 4 – misurano il traffico e le interazioni per migliorare il sito. I dati sono anonimizzati e aggregati, senza identificazione personale.</p>
-        </div>
-
-        <div class="cookie-category">
-          <div class="cookie-cat-header">
-            <span class="cookie-cat-name">Marketing / Profilazione</span>
-            <label class="cookie-toggle" aria-label="Attiva cookie di marketing">
-              <input type="checkbox" id="ck-marketing" />
-              <span class="cookie-toggle-slider"></span>
-            </label>
-          </div>
-          <p class="cookie-cat-desc">Pixel di Meta (Facebook/Instagram) e strumenti di remarketing. Permettono di mostrarti annunci pertinenti sui social e sulle piattaforme partner.</p>
-        </div>
-
-      </div>
-
-      <div class="cookie-banner-actions">
-        <button class="cookie-btn cookie-btn-customize" id="ck-customize">Personalizza</button>
-        <button class="cookie-btn cookie-btn-reject" id="ck-reject">Rifiuta tutti</button>
-        <button class="cookie-btn cookie-btn-accept" id="ck-accept">Accetta tutti</button>
-      </div>
-
-      <div class="cookie-banner-actions" id="ck-save-row" hidden>
-        <button class="cookie-btn cookie-btn-save" id="ck-save">Salva preferenze</button>
-      </div>
-
-    </div>
-  </div>
 
 </body>
 </html>
