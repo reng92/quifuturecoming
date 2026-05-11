@@ -2,7 +2,20 @@
   "permissions": {
     "allow": [
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(magick --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(ffmpeg -hide_banner -loglevel error -y -i classroom.jpg -vf \"scale='min\\(1920,iw\\)':-2\" -q:v 3 classroom.new.jpg)",
+      "Bash(ffmpeg -hide_banner -loglevel error -y -i founder.jpg -vf \"scale='min\\(1200,iw\\)':-2\" -q:v 3 founder.new.jpg)",
+      "Bash(ffmpeg -hide_banner -loglevel error -y -i soci.jpg -vf \"scale='min\\(1200,iw\\)':-2\" -q:v 3 soci.new.jpg)",
+      "Bash(ls -lh *.jpg *.new.jpg)",
+      "Bash(ffmpeg -hide_banner -loglevel error -y -i instagram-__TRACKED_VAR__.jpg -vf 'scale='\\\\''min\\(720,iw\\)'\\\\'':-2' -q:v 4 instagram-__TRACKED_VAR__.new.jpg)",
+      "Bash(mv -f img/classroom.new.jpg img/classroom.jpg)",
+      "Bash(mv -f img/founder.new.jpg img/founder.jpg)",
+      "Bash(mv -f img/soci.new.jpg img/soci.jpg)",
+      "Bash(mv -f instagram/instagram-__TRACKED_VAR__.new.jpg instagram/instagram-__TRACKED_VAR__.jpg)"
     ]
   }
 }
