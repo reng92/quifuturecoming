@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" role="img" aria-label="QuiFuture — Centro Alta Formazione">
+  <defs>
+    <path id="qfh-top" d="M 30,80 a 50,50 0 0 1 100,0" fill="none"></path>
+    <path id="qfh-bot" d="M 32,80 a 48,48 0 0 0 96,0" fill="none"></path>
+  </defs>
+  <g>
+    <circle cx="80" cy="80" r="62" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+    <circle cx="80" cy="80" r="51" fill="none" stroke="currentColor" stroke-width="0.7"></circle>
+    <text font-family="&#39;Cormorant Garamond&#39;, &#39;EB Garamond&#39;, Georgia, serif" font-size="9" letter-spacing="4" fill="currentColor">
+      <textPath href="#qfh-top" startOffset="50%" text-anchor="middle">QUI IL TUO FUTURO</textPath>
+    </text>
+    <text font-family="&#39;Cormorant Garamond&#39;, &#39;EB Garamond&#39;, Georgia, serif" font-size="9" letter-spacing="4" fill="currentColor">
+      <textPath href="#qfh-bot" startOffset="50%" text-anchor="middle">QUI FUTURE</textPath>
+    </text>
+    <text x="80" y="93" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, &#39;EB Garamond&#39;, Georgia, serif" font-weight="500" font-size="42" letter-spacing="1" fill="currentColor">QF</text>
+  </g>
+  <g transform="translate(170,0)">
+    <text x="0" y="78" font-family="&#39;Cormorant Garamond&#39;, &#39;EB Garamond&#39;, Georgia, serif" font-size="44" letter-spacing="6" fill="currentColor">QUIFUTURE</text>
+    <text x="0" y="106" font-family="&#39;Inter&#39;, &#39;Helvetica Neue&#39;, sans-serif" font-size="14" letter-spacing="6" fill="currentColor" font-weight="400">CENTRO ALTA FORMAZIONE</text>
+  </g>
+</svg>
